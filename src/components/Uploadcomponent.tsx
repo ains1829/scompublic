@@ -53,7 +53,7 @@ function Uploadcomponent({reference} : {reference:string} ){
           <MessageOutlined />
         </span>
         <span className='font-bold'>Feedback</span>
-        <span className='text-xs'>Nous comprenons que nos interventions peuvent parfois etre percues comme delicates , mais elle sont essentielles pour assurer le respect des normes . votre feedback est important , que ce soit pour signaler des incomprehensions ou pour partager vos points de vue . Merci de nous aider a ameliorer la transparence et l'equite de nos actions</span>
+        <span className='text-xs'>Nous sommes conscients que nos interventions peuvent parfois être perçues comme délicates, mais elles sont cruciales pour garantir le respect des normes. Votre retour est important, que ce soit pour signaler des incompréhensions ou pour partager vos opinions. Merci de contribuer à l'amélioration de la transparence et de l'équité de nos actions.</span>
         <form onSubmit={handleSubmit} className='flex flex-col gap-y-5 mt-3'>
             <div className="flex flex-col gap-y-1">
               <label className='text-xs'>Email</label>

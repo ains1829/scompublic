@@ -88,7 +88,7 @@ function ContentSociete() {
       > 
         <div className="flex justify-between items-center text-sm">
           <div className="flex flex-col">
-            <span className="text-xl" >Liste Societe.</span>
+            <span className="text-xl font-bold" >Liste Societe.</span>
           </div>
           <div className="flex gap-3 w-1/2">
             <Search placeholder="Recherche" allowClear onSearch={onSearch} className="font-sans" />

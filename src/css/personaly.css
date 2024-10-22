@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "poppins";
+  src: url("/poppins/Poppins-Light.ttf") format('truetype');
+}
+
+:root {
+  --blue: #0B162C;
+  --blue_purple: #1C2942;
+  --blue_purple_ligth: #3B556D;
+  --gray: rgb(251 251 251);
+}
+
+body {
+  font-family: "poppins";
+}
+
+.no-hover-button:hover,
+.no-hover-button:focus,
+.no-hover-button:active {
+  background-color: var(--blue) !important;
+  color: white !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+}

@@ -34,8 +34,8 @@ function Uploadcomponent({reference} : {reference:string} ){
   };
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (contact.trim().length > 9 && text.trim().length > 0) {
-      const reponse = await sending_feedback.mutateAsync({ file: getFileListAsFiles(), numero_serie: reference!, contact: contact, text: text , email:email })
+    if (contact.trim().length === 9) {
+      const reponse = await sending_feedback.mutateAsync({ file: getFileListAsFiles(), numero_serie: reference!, contact: "+261"+contact, text: text , email:email })
       console.log(reponse.object)
       if (reponse.status === 200) {
         setContact('');

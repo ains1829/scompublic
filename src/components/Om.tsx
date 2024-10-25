@@ -4,6 +4,11 @@ import {
   SyncOutlined,
   CheckCircleOutlined
 } from '@ant-design/icons';
+import dayjs from 'dayjs';
+import 'dayjs/locale/fr';
+export function formatOrderDate(dateString: Date): string {
+  return dayjs(dateString).format('DD MMMM YYYY');
+}
 function Om({ data }: { data: Ordredemission }) {
   return (
     <>
@@ -30,12 +35,12 @@ function Om({ data }: { data: Ordredemission }) {
               <span>{data.numeroserie }</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>Date debut : </span>
-              <span>{data.debut.toString() }</span>
+              <span>Début de la mission : </span>
+              <span>{formatOrderDate(data.debut) }</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>Date fin : </span>
-              <span>{data.fin !== null ?  data.fin.toString() : "en cours "}</span>
+              <span>Fin de la mission : </span>
+              <span>{data.fin !== null ?  formatOrderDate(data.fin) : "en cours "}</span>
             </div>
             {
               data.typemission === 1 ?

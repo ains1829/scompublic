@@ -11,6 +11,7 @@ export interface Societedata{
   addresse: string;
   region: string;
   logo: string;
+  idregion: number;
 }
 export const TransformdataSociete = (data: any[]) : Societedata [] => {
   return data.map(item => ({
@@ -25,6 +26,7 @@ export const TransformdataSociete = (data: any[]) : Societedata [] => {
     district: item.district.nameville,
     addresse: item.addresse,
     region: item.region.nameregion,
-    logo:item.url_logo,
+    logo: item.url_logo,
+    idregion:item.region.idregion
   }))
 }

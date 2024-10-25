@@ -33,7 +33,6 @@ export function useSignalement() {
       if (error) {
         console.log(error);
       } else {
-
       }
     }
   })

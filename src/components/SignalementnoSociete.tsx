@@ -45,7 +45,7 @@ function SignalementnoSociete({onOpenChange} : ComponentTestProps) {
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (contact.trim().length > 9 && text.trim().length > 10 && societe.trim().length > 5 && addresse.trim().length > 5 ) {
+    if (contact.trim().length === 9 && text.trim().length > 10 && societe.trim().length > 5 && addresse.trim().length > 5 ) {
       console.log(contact);
       console.log(text);
       console.log(getFileListAsFiles());

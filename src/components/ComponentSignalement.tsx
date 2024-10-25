@@ -39,11 +39,8 @@ function ComponentSignalement({CloseModal , societe} : ParentComponent) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (contact.trim().length > 9 && text.trim().length > 10) {
-      console.log(contact);
-      console.log(text);
-      console.log(getFileListAsFiles());
-      const reponse = await send_signalement.mutateAsync({ idsociete: societe.key, societe: 'societe', addresse: 'addresse', contact: contact, email: email, anomaly: anomaly!, motifs: text, file: getFileListAsFiles(), region: 0 });
+    if (contact.trim().length === 9) {
+      const reponse = await send_signalement.mutateAsync({ idsociete: societe.key, societe: 'societe', addresse: 'addresse', contact: "+261"+contact, email: email, anomaly: anomaly!, motifs: text, file: getFileListAsFiles(), region: societe.idregion });
       if (reponse.status === 200) {
         CloseModal();
         message.warning("Signal envoyé");
